@@ -31,7 +31,7 @@ COPY --from=builder /app/dist ./dist
 # COPY .env .env
 
 # Exponer el puerto en el que se ejecutará la aplicación
-EXPOSE 3000
+EXPOSE 8080
 
 # Comando para ejecutar la aplicación
 CMD ["node", "dist/main"]

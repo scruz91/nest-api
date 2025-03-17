@@ -13,6 +13,7 @@ async function bootstrap() {
   });
 
   const app = await NestFactory.create(AppModule);
-  await app.listen(3000);
+  const port = process.env.PORT || 3000; // Escucha en el puerto que define Cloud Run o en el puerto 3000 por defecto
+  await app.listen(port);
 }
 bootstrap();
